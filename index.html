@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gregory Golberg | Fractional CTO & Software Architect</title>
-    <meta name="description" content="Fractional CTO and Software Architect. MIT CS. Two successful exits. High-scale systems expertise.">
+    <meta name="description" content="Fractional CTO and Software Architect. I build real systems, solve real problems, and ship code that works at 3 a.m.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,168 +17,208 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #1a1a1a;
-            background: #fafafa;
-            padding: 2rem;
-            max-width: 720px;
-            margin: 0 auto;
+            background: #fff;
         }
 
-        header {
-            margin-bottom: 3rem;
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            padding: 1.5rem 3rem;
+            font-size: 0.9rem;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 3rem;
+        }
+
+        /* Hero section */
+        .hero {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 4rem;
             padding-top: 2rem;
         }
 
-        h1 {
-            font-size: 1.75rem;
-            font-weight: 600;
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
+            color: #1a1a1a;
         }
 
-        .tagline {
-            color: #666;
+        .hero-content .tagline {
             font-size: 1.1rem;
-        }
-
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        h2 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #999;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            padding: 0.25rem 0;
-            color: #333;
-        }
-
-        li::before {
-            content: "—";
-            color: #ccc;
-            margin-right: 0.75rem;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #e8f4f8 0%, #e8f4f8 100%);
-            padding: 1.5rem;
-            border-radius: 8px;
+            color: #666;
             margin-bottom: 1.5rem;
         }
 
-        .highlight p {
+        .hero-content p {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .hero-content p:last-of-type {
             margin-bottom: 0;
         }
 
-        a {
-            color: #0066cc;
-            text-decoration: none;
+        /* Three column section */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid #eee;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .column h3 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #999;
+            margin-bottom: 1rem;
         }
 
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+        .column ul {
+            list-style: none;
         }
 
-        .contact-links a {
+        .column li {
+            padding: 0.4rem 0;
             color: #333;
+            font-size: 0.95rem;
         }
 
+        /* Footer */
         footer {
             margin-top: 4rem;
-            padding-top: 2rem;
+            padding: 2rem 3rem;
             border-top: 1px solid #eee;
             color: #999;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
+            text-align: center;
         }
 
-        @media (max-width: 600px) {
-            body {
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
                 padding: 1rem;
+                gap: 1.5rem;
             }
 
-            h1 {
-                font-size: 1.5rem;
+            .container {
+                padding: 1.5rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .photo {
+                margin: 0 auto;
+                width: 160px;
+                height: 160px;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Gregory Golberg</h1>
-        <p class="tagline">Fractional CTO & Software Architect</p>
-    </header>
+    <nav>
+        <a href="mailto:gregory@methodandapparatus.com">Contact</a>
+        <a href="https://cal.com/ggolberg">Book a time</a>
+        <a href="https://blog.debedb.com">Blog</a>
+        <a href="https://linkedin.com/in/ggolberg">LinkedIn</a>
+    </nav>
 
-    <section>
-        <div class="highlight">
-            <p>I help companies build and scale their technology. MIT CS graduate with 20+ years of experience, including two successful exits as founding CTO. I bring senior technical leadership without the full-time commitment.</p>
-        </div>
-    </section>
+    <div class="container">
+        <section class="hero">
+            <img src="photo.jpg" alt="Gregory Golberg" class="photo">
+            <div class="hero-content">
+                <h1>Gregory Golberg</h1>
+                <p class="tagline">Fractional CTO & Software Architect</p>
 
-    <section>
-        <h2>What I Do</h2>
-        <ul>
-            <li>Fractional CTO for startups and scale-ups</li>
-            <li>Technical due diligence for investors</li>
-            <li>Architecture reviews and cloud migrations</li>
-            <li>Engineering team building and mentoring</li>
-        </ul>
-    </section>
+                <p>I build real systems, solve real problems, and mentor people who ask "why" as much as "how." I've worn titles from founding engineer to CTO, across startups, scaleups, and the occasional fire that needed putting out yesterday.</p>
 
-    <section>
-        <h2>Background</h2>
-        <ul>
-            <li>Two exits as founding CTO (Adotube, OpenDSP)</li>
-            <li>Built and led teams from 1 to 30+ engineers</li>
-            <li>High-scale systems: millions QPS, sub-100ms latency</li>
-            <li>AWS Certified Solutions Architect</li>
-            <li>MIT Computer Science</li>
-        </ul>
-    </section>
+                <p>My stack spans Java, Go, Python, TypeScript, cloud infra, data pipelines, distributed systems. But tools are just tools. Machine code gave way to assembly, assembly to compilers, compilers to frameworks, and now we have AI writing code. It's the same story: each abstraction lets us think at a higher level. I use AI extensively and think you should too. The hard part was never typing.</p>
 
-    <section>
-        <h2>Recent Work</h2>
-        <ul>
-            <li>DrumWave — Principal Engineer, data monetization platform</li>
-            <li>SteppeChange — Lead Platform Architect, ad tech (contract)</li>
-            <li>Jobox.ai — Chief Architect, engineering velocity & DevOps</li>
-            <li>AppLovin/MZ — Principal Engineer, RTB systems</li>
-        </ul>
-    </section>
+                <p>I'm not interested in shipping complexity or babysitting fragile architectures. I like code that's honest, systems that are observable, and teams that take their work seriously without taking themselves too seriously.</p>
 
-    <section>
-        <h2>Contact</h2>
-        <div class="contact-links">
-            <a href="mailto:gregory@methodandapparatus.com">Email</a>
-            <a href="https://linkedin.com/in/ggolberg">LinkedIn</a>
-            <a href="https://github.com/debedb">GitHub</a>
-            <a href="https://blog.debedb.com">Blog</a>
-        </div>
-    </section>
+                <p>If you're solving hard problems and value pragmatism over posturing, let's talk.</p>
+            </div>
+        </section>
+
+        <section class="columns">
+            <div class="column">
+                <h3>What I Do</h3>
+                <ul>
+                    <li>Fractional CTO</li>
+                    <li>Technical Due Diligence</li>
+                    <li>Architecture Reviews</li>
+                    <li>Cloud & Data Strategy</li>
+                    <li>Team Building & Mentoring</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Background</h3>
+                <ul>
+                    <li>Two exits as founding CTO</li>
+                    <li>MIT Computer Science</li>
+                    <li>AWS Certified Architect</li>
+                    <li>Built teams from 1 to 30+</li>
+                    <li>High-scale systems (M+ QPS)</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Recent Work</h3>
+                <ul>
+                    <li>DrumWave &mdash; Data monetization</li>
+                    <li>SteppeChange &mdash; Ad tech</li>
+                    <li>Jobox.ai &mdash; Chief Architect</li>
+                    <li>AppLovin/MZ &mdash; RTB systems</li>
+                    <li>Amazon A9 &mdash; Ad forecasting</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>Method & Apparatus</p>
+        Method & Apparatus
     </footer>
 </body>
 </html>
